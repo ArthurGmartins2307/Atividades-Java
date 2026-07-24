@@ -1,9 +1,9 @@
 class atividade2 {
     public static void main(String[] args){
-        Pessoa.mostrarMensagem();
         Pessoa arthur = new Pessoa();
         arthur.nome= "Arthur";
         arthur.apresentar();
+        Pessoa.mostrarMensagem();
     }
 }
 

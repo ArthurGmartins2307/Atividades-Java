@@ -1,53 +1,17 @@
-public class atividade3{
-    public static void main(String[] args){
-        Calculadora calc = new Calculadora();
+class Animal{
+    String nome;
+    String especie;
 
-        calc.somar(10, 5);
-        calc.mostrarResultado();
-
-        calc.multiplicar(8, 4);
-        calc.mostrarResultado();
-
-        calc.dividir(50, 10);
-        calc.mostrarResultado();
-
-        calc.limpar();
-        calc.mostrarResultado();
+    void emitirSom(){
+        System.out.println("Meu nome é " + nome + " e eu sou um " + especie);
     }
 }
 
-class Calculadora{
-    double resultado;
-    public Calculadora(){
-        resultado = 0;
-    }
-    public double somar(double a, double b){
-        resultado = a + b;
-        return resultado;
-    }
-    public double subtrair(double a, double b){
-        resultado = a - b;
-        return resultado;
-    }
-    public double multiplicar(double a, double b){
-        resultado = a * b;
-        return resultado;
-    }
-    public double dividir(double a, double b){
-        if (b != 0) {
-            resultado = a / b;
-            return resultado;
-        }else{
-            System.out.println("Erro!");
-            return Double.NaN;
-        }
-    }
-
-    public void limpar(){
-        resultado = 0;
-    }
-
-    public void mostrarResultado(){
-        System.out.println("Resultado: " + resultado);
+public class atividade3{
+    public static void main(String[] args){
+        Animal spike = new Animal();
+        spike.nome = "Spike";
+        spike.especie = "cachorro";
+        spike.emitirSom();
     }
 }

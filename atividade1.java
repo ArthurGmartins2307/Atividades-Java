@@ -1,5 +1,5 @@
  // Classepublic 
-class atividade {
+class atividade1{
     // Método
     public static void main(String[] args) {
 

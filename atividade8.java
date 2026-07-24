@@ -1,35 +1,46 @@
 public class atividade8 {
-    public static void main(String[] args) {
-        Carro carroArthur = new Carro("Jeep", "Renegade");
-        carroArthur.acelerar();
-        carroArthur.frear();
-        carroArthur.mostrarVelocidade();
-    }
+    public static void main(String[] args){
+        Produto notebook = new Produto("Notebook", 5000);
+        notebook.mostrarProduto();
+        Produto mouse = new Produto("Mouse", 80);
+        mouse.aumentarPreco(10);
+        mouse.mostrarProduto();
+        Produto teclado = new Produto("Teclado", 120);
+        teclado.mostrarProduto();
+        Produto.mostrarQuantidade();
+    };
 }
 
-class Carro{
-    String marca;
-    String modelo;
-    int velocidade;
+class Produto{
+    String nome;
+    double preco;
+    static int quantidadeProdutos;
 
-    public Carro(String marca, String modelo){
-        this.marca = marca;
-        this.modelo = modelo;
-        velocidade = 0;
-    }
-
-    public void acelerar(){
-        this.velocidade += 10;
-    }
-    public void frear(){
-        if (velocidade >= 10) {
-            velocidade -= 10;
+    public Produto(String nome, double preco){
+        this.nome = nome;
+        if(preco > 0){
+            this.preco = preco;
+            quantidadeProdutos++;
         }else{
-            System.out.println("O carro já está parado.");
+            System.out.println("Preço inválido. Produto não contabilizado.");
         }
+        
     }
 
-    public void mostrarVelocidade(){
-        System.out.println("Velocidade: " + velocidade + "km/h");
+    public void mostrarProduto(){
+        System.out.println("Nome: " + nome);
+        System.out.println("Preço: R$" + preco);
+    }
+
+    public static void mostrarQuantidade(){
+        System.out.println("Quantidade de produtos cadastrados: " + quantidadeProdutos);
+    }
+
+    public void aumentarPreco(double porcentagem){
+        if (porcentagem > 0) {
+            preco += ((porcentagem / 100) * preco);
+        }else{
+            System.out.println("Não foi possível aumentar o preço do produto.");
+        }
     }
 }

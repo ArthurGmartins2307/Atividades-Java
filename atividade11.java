@@ -1,40 +1,53 @@
-public class atividade11 {
-    public static void main(String[] args) {
-        Curso java = new Curso("Java", 16);
-        Aluno arthur = new Aluno("Arthur", 18, java);
-        arthur.mostrarAluno();
-    }
-}
-//lembrar de perguntar se pode ter ``
-class Aluno{
-    String nome;
-    int idade;
-    Curso curso; //Parte mais importante do exercício;
+public class atividade11{
+    public static void main(String[] args){
+        Calculadora calc = new Calculadora();
 
-    public Aluno(String nome, int idade, Curso nomeCurso){
-        this.nome = nome;
-        this.idade = idade;
-        this.curso = nomeCurso;
-    }
+        calc.somar(10, 5);
+        calc.mostrarResultado();
 
-    public void mostrarAluno(){
-        System.out.println("Nome: " + this.nome);
-        System.out.println("Idade: " + this.idade);
-        System.out.println("Curso: " + this.curso.nome);
-        System.out.println("Carga horária: " + this.curso.cargaHoraria);
+        calc.multiplicar(8, 4);
+        calc.mostrarResultado();
+
+        calc.dividir(50, 10);
+        calc.mostrarResultado();
+
+        calc.limpar();
+        calc.mostrarResultado();
     }
 }
 
-class Curso{
-    String nome;
-    int cargaHoraria;
-
-    public Curso(String nome, int cargaHoraria){
-        this.nome = nome;
-        this.cargaHoraria = cargaHoraria;
+class Calculadora{
+    double resultado;
+    public Calculadora(){
+        resultado = 0;
     }
-    public void mostrarCurso(){
-        System.out.println("Curso: " + nome);
-        System.out.println("Carga horária: " + cargaHoraria + " horas");
+    public double somar(double a, double b){
+        resultado = a + b;
+        return resultado;
+    }
+    public double subtrair(double a, double b){
+        resultado = a - b;
+        return resultado;
+    }
+    public double multiplicar(double a, double b){
+        resultado = a * b;
+        return resultado;
+    }
+    public double dividir(double a, double b){
+        if (b != 0) {
+            resultado = a / b;
+            return resultado;
+        }else{
+            System.out.println("Erro!");
+            return Double.NaN;
+        }
+    }
+
+    public void limpar(){
+        resultado = 0;
+    }
+
+    public void mostrarResultado(){
+        System.out.println("Resultado: " + resultado);
     }
 }

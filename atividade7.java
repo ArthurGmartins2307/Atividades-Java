@@ -1,25 +1,35 @@
 public class atividade7 {
     public static void main(String[] args) {
-        Pessoa arthur = new Pessoa("Arthur");
-        arthur.mostrarNome();
-        Pessoa ana = new Pessoa("Ana");
-        ana.mostrarNome();
-        Pessoa joao = new Pessoa("João");
-        joao.mostrarNome();
-
-        System.out.println("Pessoas: " + Pessoa.quantidadePessoas);
+        Carro carroArthur = new Carro("Jeep", "Renegade");
+        carroArthur.acelerar();
+        carroArthur.frear();
+        carroArthur.mostrarVelocidade();
     }
 }
 
-class Pessoa{
-    String nome;
-    static int quantidadePessoas;
+class Carro{
+    String marca;
+    String modelo;
+    int velocidade;
 
-    public Pessoa(String nome){
-        this.nome = nome;
-        quantidadePessoas++;
+    public Carro(String marca, String modelo){
+        this.marca = marca;
+        this.modelo = modelo;
+        velocidade = 0;
     }
-    public void mostrarNome(){
-        System.out.println("Nome: " + nome);
+
+    public void acelerar(){
+        this.velocidade += 10;
+    }
+    public void frear(){
+        if (velocidade >= 10) {
+            velocidade -= 10;
+        }else{
+            System.out.println("O carro já está parado.");
+        }
+    }
+
+    public void mostrarVelocidade(){
+        System.out.println("Velocidade: " + velocidade + "km/h");
     }
 }
