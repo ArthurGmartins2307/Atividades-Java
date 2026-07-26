@@ -1,13 +1,13 @@
 class atividade2 {
     public static void main(String[] args){
-        Pessoa arthur = new Pessoa();
+        Pessoa2 arthur = new Pessoa2();
         arthur.nome= "Arthur";
         arthur.apresentar();
-        Pessoa.mostrarMensagem();
+        Pessoa2.mostrarMensagem();
     }
 }
 
-class Pessoa{
+class Pessoa2{
 
     String nome;
 

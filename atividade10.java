@@ -5,7 +5,7 @@ public class atividade10 {
         arthur.mostrarAluno();
     }
 }
-//lembrar de perguntar se pode ter ``
+
 class Aluno{
     String nome;
     int idade;
