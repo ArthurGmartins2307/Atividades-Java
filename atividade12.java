@@ -5,6 +5,8 @@ public class atividade12 {
 }
 
 class cliente{
+    String nome;
+    String cpf;
     
 }
 
