@@ -45,12 +45,14 @@ class ContaBancaria{
     }
 
     public void transferir(ContaBancaria destino, double valor){
-        if (valor > 0 && this.saldo >= valor) {
+        if (valor > 0 && saldo >= valor) {
+            sacar(valor);
+            destino.depositar(valor);
             System.out.println("Transferência realizada.");
-            this.saldo -= valor;
-            destino.saldo += valor;
-        }else{
-            System.out.println("Valor inválido para transferir.");
+        } else if (valor <= 0) {
+            System.out.println("Valor inválido.");
+        } else {
+            System.out.println("Saldo insuficiente.");
         }
     }
 
