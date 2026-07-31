@@ -1,12 +1,13 @@
 public class atividade29 {
     public static void main(String[] args) {
-        Aluno29 alunos[] = new Aluno29[5];
-        alunos[0] = new Aluno29("Arthur", 18);
-        alunos[1] = new Aluno29("Ana", 15);
-        alunos[2] = new Aluno29("Isaac", 17);
-        alunos[3] = new Aluno29("Henrique", 17);
-        alunos[4] = new Aluno29("Gabriela", 19
-        );
+        Aluno29[] alunos = {
+                new Aluno29("Arthur", 18),
+                new Aluno29("Ana", 15),
+                new Aluno29("Isaac", 17),
+                new Aluno29("Henrique", 17),
+                new Aluno29("Gabriela", 19),
+        };
+
 
         int maisNovo = alunos[0].idade;
         String maisNovoNome = alunos[0].nome;
