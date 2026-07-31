@@ -1,8 +1,8 @@
 public class atividade9 {
     public static void main(String[] args){
-        Livro livro1 = new Livro("A revolução dos bichos", "George Orwel");
-        Livro livro2 = new Livro("1984", "George Orwel");
-        Livro livro3 = new Livro("Batman", "Matt Reves");
+        Livro9 livro1 = new Livro9("A revolução dos bichos", "George Orwel");
+        Livro9 livro2 = new Livro9("1984", "George Orwel");
+        Livro9 livro3 = new Livro9("Batman", "Matt Fraction");
         livro1.emprestar(); 
         livro1.emprestar();
         livro1.devolver();
@@ -10,18 +10,18 @@ public class atividade9 {
         livro1.mostrarInformacoes();
         livro2.mostrarInformacoes();
         livro3.mostrarInformacoes();
-        Livro.mostrarQuantidadeLivros();
+        Livro9.mostrarQuantidadeLivros();
     }
     
 }
 
-class Livro{
+class Livro9{
     String titulo;
     String autor;
     boolean emprestado;
     static int quantidadeLivros;
 
-    public Livro(String titulo, String autor){
+    public Livro9(String titulo, String autor){
         this.titulo = titulo;
         this.autor = autor;
         emprestado = false;

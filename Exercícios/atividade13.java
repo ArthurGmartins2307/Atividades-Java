@@ -1,7 +1,7 @@
 public class atividade13 {
     public static void main(String[] args) {
-        ContaBancaria arthur = new ContaBancaria("Arthur", 0);
-        ContaBancaria ana = new ContaBancaria("Ana", 1);
+        ContaBancaria13 arthur = new ContaBancaria13("Arthur", 0);
+        ContaBancaria13 ana = new ContaBancaria13("Ana", 1);
         arthur.depositar(500); 
         arthur.transferir(ana, 200);
         ana.sacar(50);
@@ -9,17 +9,17 @@ public class atividade13 {
         ana.depositar(-70);
         arthur.transferir(ana, 10000);
         arthur.mostrarConta();
-        ContaBancaria.mostrarQuantidadeContas();
+        ContaBancaria13.mostrarQuantidadeContas();
     }
 }
 
-class ContaBancaria{
+class ContaBancaria13{
     String titular;
     int numeroConta;
     double saldo;
     static int quantidadeContas;
 
-    public ContaBancaria(String titular, int numeroConta){
+    public ContaBancaria13(String titular, int numeroConta){
         this.titular = titular;
         this.numeroConta = numeroConta;
         saldo = 0.00;
@@ -44,7 +44,7 @@ class ContaBancaria{
         }
     }
 
-    public void transferir(ContaBancaria destino, double valor){
+    public void transferir(ContaBancaria13 destino, double valor){
         if (valor > 0 && saldo >= valor) {
             sacar(valor);
             destino.depositar(valor);
@@ -62,6 +62,6 @@ class ContaBancaria{
         System.out.println("Saldo: " + this.saldo);
     }
     public static void mostrarQuantidadeContas(){
-        System.out.println("Quantidade de contas registradas" + ContaBancaria.quantidadeContas);
+        System.out.println("Quantidade de contas registradas" + ContaBancaria13.quantidadeContas);
     }
 }

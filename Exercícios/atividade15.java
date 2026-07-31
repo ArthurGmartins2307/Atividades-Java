@@ -1,9 +1,9 @@
 public class atividade15 {
     public static void main(String[] args) {
-        Aluno[] alunos = new Aluno[3];
-        alunos[0] = new Aluno("Arthur", 18);
-        alunos[1] = new Aluno("Ana", 18);
-        alunos[2] = new Aluno("João", 19);
+        Aluno15[] alunos = new Aluno15[3];
+        alunos[0] = new Aluno15("Arthur", 18);
+        alunos[1] = new Aluno15("Ana", 18);
+        alunos[2] = new Aluno15("João", 19);
 
         for(int i = 0; i < alunos.length; i++){
             alunos[i].mostrarAluno();
@@ -11,11 +11,11 @@ public class atividade15 {
     }
 }
 
-class Aluno{
+class Aluno15{
     String nome;
     int idade;
 
-    public Aluno(String nome, int idade){
+    public Aluno15(String nome, int idade){
         this.nome = nome;
         this.idade = idade;
     }

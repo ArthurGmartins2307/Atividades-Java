@@ -1,21 +1,21 @@
 public class atividade6 {
     public static void main(String[] args) {
-        Pessoa arthur = new Pessoa("Arthur");
+        Pessoa6 arthur = new Pessoa6("Arthur");
         arthur.mostrarNome();
-        Pessoa ana = new Pessoa("Ana");
+        Pessoa6 ana = new Pessoa6("Ana");
         ana.mostrarNome();
-        Pessoa joao = new Pessoa("João");
+        Pessoa6 joao = new Pessoa6("João");
         joao.mostrarNome();
 
-        System.out.println("Pessoas: " + Pessoa.quantidadePessoas);
+        System.out.println("Pessoa6s: " + Pessoa6.quantidadePessoas);
     }
 }
 
-class Pessoa{
+class Pessoa6{
     String nome;
     static int quantidadePessoas;
 
-    public Pessoa(String nome){
+    public Pessoa6(String nome){
         this.nome = nome;
         quantidadePessoas++;
     }
