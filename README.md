@@ -2,8 +2,6 @@
 
 Repositório dedicado ao meu aprendizado de **Java**, com exercícios práticos desenvolvidos para consolidar os fundamentos da linguagem, compreender a programação orientada a objetos e desenvolver raciocínio lógico para a construção de sistemas.
 
-Comecei este repositório para organizar meus estudos, acompanhar minha evolução e transformar os conceitos aprendidos em código. O foco não é apenas fazer os exercícios funcionarem, mas entender como cada parte funciona e como os conceitos se conectam na construção de aplicações reais.
-
 ## 🎯 Objetivos
 
 - Construir uma base sólida em Java.
